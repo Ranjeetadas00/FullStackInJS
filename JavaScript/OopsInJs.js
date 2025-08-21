@@ -41,3 +41,35 @@ console.log(myCar);
 
 let myNewCar = new Car("Tata","Safari")
 console.log();
+// ---------'''''''''''''''''''''''''''''''''.............Functions
+
+function Tea(type){
+    this.type = type;
+    this.describe = function(){
+        return `this is a cup of ${this.type}`
+    }
+}
+
+let lt = new Tea("Lemon Tea")
+console.log(lt.describe());     //this is a cup of Lemon Tea
+
+function Animal(species,sound){
+    this.species = species;
+    this.sound = sound;
+}
+
+Animal.prototype.soundd = function(){
+    return `${this.species} makes a ${this.sound} sound`
+}
+
+let dog = new Animal("Dog","Bhow")
+console.log(dog)            //Animal { species: 'Dog', sound: 'Bhow' }
+console.log(dog.soundd())       /// Dog makes a Bhow sound
+
+
+let cat = new Animal("Cat","Meaoo")
+console.log(cat.soundd())       // Cat makes a Meaoo sound
+
+// .................................. Throw Error using Throw Keyword
+
+// function 
