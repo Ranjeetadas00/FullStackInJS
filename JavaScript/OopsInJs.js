@@ -1,0 +1,1 @@
+// in console of any browser declare anything like -> let arr=[2,3,4] and type arr and check prototype
