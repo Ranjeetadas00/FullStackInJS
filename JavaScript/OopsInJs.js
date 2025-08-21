@@ -40,7 +40,11 @@ let myCar  = new Car("Toyota","Honda")
 console.log(myCar);
 
 let myNewCar = new Car("Tata","Safari")
-console.log();
+console.log(myNewCar);
+
+let latestCar = Car("mercodez","Tata")     //without new there is no Error but underfined is printed, in the last part we can use Throw Keyword to generate error
+console.log(latestCar);
+
 // ---------'''''''''''''''''''''''''''''''''.............Functions
 
 function Tea(type){
@@ -72,4 +76,13 @@ console.log(cat.soundd())       // Cat makes a Meaoo sound
 
 // .................................. Throw Error using Throw Keyword
 
-// function 
+function Drink(name){
+    if(!new.target){
+        throw new Error("Drink must be called with new keyword")
+    }
+    this.name = name
+}
+
+let tea = new Drink("tea")
+// let coffee = Drink("coffee")     //throw new Error("Drink must be called with new keyword") -<--we explicitely throw error here 
+// Error: Drink must be called with new keyword
