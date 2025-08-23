@@ -100,5 +100,53 @@ class Calculator{
  let miniCals = new Calculator();
  console.log(Calculator.add(4,5));
 //   console.log(miniCals.add(4,5));  // this will give error as add is a static methord and should be accessed only using Class Name
- 
- 
+//  
+//  ========================Adding Getters and Setters to have more control over the properties of class
+
+// class Employee{
+//     constructor(name,salary){
+//         this.name = name;
+//         this._salary = salary;
+//     }
+
+//     get salary(){
+//         return this._salary;
+//     }
+
+//     set salary(value){
+//         if(value<0){
+
+//         }
+//     }
+
+// }
+// let emp = new Employee("Alice", 50000);
+// console.log(emp._salary);
+////////////////////////////////////////////////////////////////
+
+function User(email, password){
+    this._email = email;
+    this._password = password
+
+    Object.defineProperty(this, 'email', {
+        get: function(){
+            return this._email.toUpperCase()
+        },
+        set: function(value){
+            this._email = value
+        }
+    })
+    Object.defineProperty(this, 'password', {
+        get: function(){
+            return this._password.toUpperCase()
+        },
+        set: function(value){
+            this._password = value
+        }
+    })
+
+}
+
+const chai = new User("chai@chai.com", "chai")
+
+console.log(chai.email);
