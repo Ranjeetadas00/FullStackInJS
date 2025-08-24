@@ -37,3 +37,22 @@ document.getElementById("addNewItem").addEventListener("click",function(){
 })
 
 // ex-5
+document.getElementById("removeLastTask").addEventListener("click",function(){
+    let taskList = document.getElementById("taskList");
+    // taskList.remove()//this will remove entire all tasklist
+    taskList.lastChild.remove()
+})
+
+// ex-6
+document.getElementById("clickMeButton").addEventListener("click",function(){
+    alert("You clicked to show Demo of event Listener, there are many of such event handling ways check MDN to knoe more as required")
+})
+
+// ex-7
+document.getElementById("teaList").addEventListener("click", function(event){
+    console.log(event.target);
+    if(event.target && event.target.matches(".teaItem")){
+        alert("You Selected : " + event.target.textContent)
+    }
+
+})
