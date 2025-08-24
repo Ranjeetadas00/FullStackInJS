@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Demo</title>
     <style>
-        body{
+        body {
             background-color: #1a1a1a;
-            color:  #fff;
+            color: #fff;
             text-align: center;
         }
-        .highlight{
+
+        .highlight {
             background-color: yellow;
             font-weight: bold;
             color: #1a1a1a;
         }
+
         .hidden {
             display: none;
         }
     </style>
-    
+
 </head>
+
 <body>
     <!-- <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1> -->
 
-<h1>JavaScript DOM Fun Examples</h1>
+    <h1>JavaScript DOM Fun Examples</h1>
     <!-- Example1 :Accessing DOM Elements -->
-     <section id="ex-1">
+    <section id="ex-1">
         <h2>Accessing DOM Elements</h2>
         <p id="myParagraph">
             This is a para , Click the button to change me!
         </p>
         <button id="changeTextButton">Change Text</button>
+    </section>
+
+    <!-- Example2 :Traversing the DOM -->
+    <section id="example-2">
+        <h2>Traversing the DOM</h2>
+        <ul id="citiesList">
+            <li>Vrindavan</li>
+            <li>New York</li>
+            <li>Mumbai</li>
+            <li>Bangalore</li>
+            <li>Cuttack</li>
+            <li>Delhi</li>
+        </ul>
+        <button id="highlightFirstCity">Highlight First City</button>
+    </section>
+
+<br><br>
+    <!-- Example2 :Manipulate the DOM Elements-->
+    <section id="example-3">Manipulate the DOM Elements
+        <div id="coffeeOrder">Order:
+            <span id="coffeeType">Latte</span>
+        </div>
+        <button id="changeOrder">Change Order to Expresso</button>
+
+    </section>
+
+    <!-- Example-4 Creating and inserting Elements -->
+     <section id="ex-4">
+        <h2>Creating and inserting Elements </h2>
+        <button id="addNewItem">Add a new Item to the Shopping List</button>
+        <ul id="shoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+            <li>Apple</li>
+        </ul>
      </section>
 
- <!-- Example2 :Traversing the DOM -->
-  <section id="example-2">
-    <h2>Traversing the DOM</h2>
-    <ul id="citiesList">
-        <li>Vrindavan</li>
-        <li>New York</li>
-        <li>Mumbai</li>
-        <li>Bangalore</li>
-        <li>Cuttack</li>
-        <li>Delhi</li>
-    </ul>
-    bu
-  </section>
-
-
-  <script src="script.js"></script>
+     <!-- Ex-5 Removing Dom Elements -->
+     <section id="ex-5">
+        <ul id="taskList">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+            <li>Task 4</li>
+        </ul>
+     </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
